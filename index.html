@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JavaScript Calculator</title>
+
+    <!----------------- Favicon Link ----------------->
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+    <!----------------- Bootstrap CSS Link ----------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Internal CSS -->
+    <style>
+      
+      /* CSS for removing number arrows in the input field with type number */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      /* Media query for adding margin bottom in all columns for small screens */
+      @media only screen and (max-width: 768px) {
+        .col-sm-12 {
+          margin-bottom: 0.5em;
+        }
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+    <!----------------- Container ----------------->
+    <div class="container">
+      <!----------------- Assignment Heading ----------------->
+      <h1 class="text-center fw-semibold my-5">JavaScript Calculator</h1>
+      <!----------------- Form ----------------->
+      <form>
+        <!----------------- Row ----------------->
+        <div class="row my-3">
+          <!------------ Column For First Number Input ----------------->
+          <div class="col-sm-12 col-md-4">
+            <label for="firstNumber" class="form-label">Number-1</label>
+            <input type="number" id="firstNumber" class="form-control" />
+          </div>
+
+          <!------------ Column For Operator ----------------->
+          <div class="col-sm-12 col-md-4">
+            <label for="operator" class="form-label">Operator</label>
+            <select id="operator" class="form-select">
+              <option value="">Select Operator</option>
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>
+          </div>
+
+          <!------------ Column For Second Number Input ----------------->
+          <div class="col-sm-12 col-md-4">
+            <label for="secondNumber" class="form-label">Number-2</label>
+            <input type="number" id="secondNumber" class="form-control" />
+          </div>
+        </div>
+
+        <!----------------- Row ----------------->
+        <div class="row my-3">
+          <!------------ Column For Button ----------------->
+          <div class="col">
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <!----------------- Row ----------------->
+        <div class="row d-flex justify-content-center my-3">
+          <!------------ Column For Answer ----------------->
+          <div class="col-sm-12 col-md-4">
+            <label for="answer" class="form-label">Answer:</label>
+            <input type="number" id="answer" class="form-control bg-secondary-subtle" readonly />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!----------------- Bootstrap JavaScript Link ----------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+    ></script>
+    <!----------------- Main JavaScript Link ----------------->
+    <script src="main.js"></script>
+  </body>
+</html>
